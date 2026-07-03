@@ -110,21 +110,3 @@ flutter build web --release --dart-define=API_BASE_URL=https://api.example.com
 ```
 
 The Flutter web release files are generated in `frontend/build/web`.
-
-Backend production environment variables:
-
-```bash
-KASIR_ENV=production
-KASIR_ADDR=:8080
-KASIR_DB_DSN=file:/var/lib/kasir/kasir.db?_pragma=foreign_keys(1)&_pragma=busy_timeout(5000)
-KASIR_OWNER_TOKEN=<random-owner-token-at-least-16-chars>
-KASIR_CASHIER_TOKEN=<random-cashier-token-at-least-16-chars>
-KASIR_OWNER_PIN=<non-default-pin-at-least-6-chars>
-KASIR_ALLOWED_ORIGINS=https://kasir.example.com
-```
-
-Notes:
-
-- Do not use `owner-demo-token`, `cashier-demo-token`, `123456`, or `KASIR_ALLOWED_ORIGINS=*` when `KASIR_ENV=production`.
-- Use a persistent path for SQLite, for example `/var/lib/kasir/kasir.db`, and back it up regularly.
-- Serve the backend and frontend through HTTPS. If they use different domains, `KASIR_ALLOWED_ORIGINS` must contain the frontend origin.
