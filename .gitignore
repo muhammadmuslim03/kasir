@@ -1,0 +1,16 @@
+# Go runtime data
+backend/*.db
+backend/*.db-shm
+backend/*.db-wal
+backend/cmd/server/*.db
+backend/cmd/server/*.db-shm
+backend/cmd/server/*.db-wal
+
+# Flutter generated outputs
+frontend/.dart_tool/
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+
+# Local editor/system files
+.DS_Store
